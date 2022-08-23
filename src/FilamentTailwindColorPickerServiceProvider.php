@@ -2,9 +2,9 @@
 
 namespace HappyToDev\FilamentTailwindColorPicker;
 
+use HappyToDev\FilamentTailwindColorPicker\Commands\FilamentTailwindColorPickerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use HappyToDev\FilamentTailwindColorPicker\Commands\FilamentTailwindColorPickerCommand;
 
 class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
 {

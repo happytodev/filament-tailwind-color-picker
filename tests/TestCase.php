@@ -2,9 +2,9 @@
 
 namespace HappyToDev\FilamentTailwindColorPicker\Tests;
 
+use HappyToDev\FilamentTailwindColorPicker\FilamentTailwindColorPickerServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use HappyToDev\FilamentTailwindColorPicker\FilamentTailwindColorPickerServiceProvider;
 
 class TestCase extends Orchestra
 {
