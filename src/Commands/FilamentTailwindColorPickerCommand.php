@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace HappyToDev\FilamentTailwindColorPicker\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentTailwindColorPickerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-tailwind-color-picker';
 
     public $description = 'My command';
 
