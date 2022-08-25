@@ -19,7 +19,7 @@ class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
             ->name('filament-tailwind-color-picker')
             // ->hasConfigFile()
             ->hasViews();
-            // ->hasMigration('create_filament-tailwind-color-picker_table')
-            // ->hasCommand(FilamentTailwindColorPickerCommand::class);
+        // ->hasMigration('create_filament-tailwind-color-picker_table')
+        // ->hasCommand(FilamentTailwindColorPickerCommand::class);
     }
 }
