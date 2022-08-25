@@ -3,7 +3,6 @@
 namespace HappyToDev\FilamentTailwindColorPicker\Forms\Components;
 
 use Filament\Forms\Components\Concerns\HasPlaceholder;
-
 use Filament\Forms\Components\Field;
 
 // use Filament\Support\Concerns\HasExtraAlpineAttributes;
@@ -13,9 +12,9 @@ class TailwindColorPicker extends Field
     use HasPlaceholder;
 
     protected string $view = 'vendor.filament-tailwind-color-picker.forms.components.tailwind-color-picker';
-    
+
     protected $isOpen = false;
-    
+
     public $colorSelected;
 
     public $colorSelectedHex;
@@ -23,9 +22,8 @@ class TailwindColorPicker extends Field
     public $bgColorSelected = '';
 
     public $scope;
-    
-    public $colors = [
 
+    public $colors = [
 
         // Slate
         ['hex' => '#f8fafc', 'twLabel' => 'slate-50',  'twBgLabel' => 'bg-slate-50',  'twTextLabel' => 'text-slate-50'],
@@ -33,167 +31,167 @@ class TailwindColorPicker extends Field
         ['hex' => '#e2e8f0', 'twLabel' => 'slate-200', 'twBgLabel' => 'bg-slate-200', 'twTextLabel' => 'text-slate-200'],
         ['hex' => '#cbd5e1', 'twLabel' => 'slate-300', 'twBgLabel' => 'bg-slate-300', 'twTextLabel' => 'text-slate-300'],
         ['hex' => '#94a3b8', 'twLabel' => 'slate-400', 'twBgLabel' => 'bg-slate-400', 'twTextLabel' => 'text-slate-400'],
-        ['hex' => '#64748b', 'twLabel' => 'slate-500', 'twBgLabel' => 'bg-slate-500', 'twTextLabel' => 'text-slate-500'], 
-        ['hex' => '#475569', 'twLabel' => 'slate-600', 'twBgLabel' => 'bg-slate-600', 'twTextLabel' => 'text-slate-600'], 
-        ['hex' => '#334155', 'twLabel' => 'slate-700', 'twBgLabel' => 'bg-slate-700', 'twTextLabel' => 'text-slate-700'], 
-        ['hex' => '#1e293b', 'twLabel' => 'slate-800', 'twBgLabel' => 'bg-slate-800', 'twTextLabel' => 'text-slate-800'], 
+        ['hex' => '#64748b', 'twLabel' => 'slate-500', 'twBgLabel' => 'bg-slate-500', 'twTextLabel' => 'text-slate-500'],
+        ['hex' => '#475569', 'twLabel' => 'slate-600', 'twBgLabel' => 'bg-slate-600', 'twTextLabel' => 'text-slate-600'],
+        ['hex' => '#334155', 'twLabel' => 'slate-700', 'twBgLabel' => 'bg-slate-700', 'twTextLabel' => 'text-slate-700'],
+        ['hex' => '#1e293b', 'twLabel' => 'slate-800', 'twBgLabel' => 'bg-slate-800', 'twTextLabel' => 'text-slate-800'],
         ['hex' => '#0f172a', 'twLabel' => 'slate-900', 'twBgLabel' => 'bg-slate-900', 'twTextLabel' => 'text-slate-900'],
-        
+
         // Gray
-        ['hex' => '#f9fafb', 'twLabel' => 'gray-50',   'twBgLabel' => 'bg-gray-50',   'twTextLabel' => 'text-gray-50'], 
-        ['hex' => '#f3f4f6', 'twLabel' => 'gray-100',  'twBgLabel' => 'bg-gray-100',  'twTextLabel' => 'text-gray-100'], 
-        ['hex' => '#e5e7eb', 'twLabel' => 'gray-200',  'twBgLabel' => 'bg-gray-200',  'twTextLabel' => 'text-gray-200'], 
-        ['hex' => '#d1d5db', 'twLabel' => 'gray-300',  'twBgLabel' => 'bg-gray-300',  'twTextLabel' => 'text-gray-300'], 
-        ['hex' => '#9ca3af', 'twLabel' => 'gray-400',  'twBgLabel' => 'bg-gray-400',  'twTextLabel' => 'text-gray-400'], 
-        ['hex' => '#6b7280', 'twLabel' => 'gray-500',  'twBgLabel' => 'bg-gray-500',  'twTextLabel' => 'text-gray-500'], 
-        ['hex' => '#4b5563', 'twLabel' => 'gray-600',  'twBgLabel' => 'bg-gray-600',  'twTextLabel' => 'text-gray-600'], 
-        ['hex' => '#374151', 'twLabel' => 'gray-700',  'twBgLabel' => 'bg-gray-700',  'twTextLabel' => 'text-gray-700'], 
-        ['hex' => '#1f2937', 'twLabel' => 'gray-800',  'twBgLabel' => 'bg-gray-800',  'twTextLabel' => 'text-gray-800'], 
-        ['hex' => '#111827', 'twLabel' => 'gray-900',  'twBgLabel' => 'bg-gray-900',  'twTextLabel' => 'text-gray-900'], 
-        
+        ['hex' => '#f9fafb', 'twLabel' => 'gray-50',   'twBgLabel' => 'bg-gray-50',   'twTextLabel' => 'text-gray-50'],
+        ['hex' => '#f3f4f6', 'twLabel' => 'gray-100',  'twBgLabel' => 'bg-gray-100',  'twTextLabel' => 'text-gray-100'],
+        ['hex' => '#e5e7eb', 'twLabel' => 'gray-200',  'twBgLabel' => 'bg-gray-200',  'twTextLabel' => 'text-gray-200'],
+        ['hex' => '#d1d5db', 'twLabel' => 'gray-300',  'twBgLabel' => 'bg-gray-300',  'twTextLabel' => 'text-gray-300'],
+        ['hex' => '#9ca3af', 'twLabel' => 'gray-400',  'twBgLabel' => 'bg-gray-400',  'twTextLabel' => 'text-gray-400'],
+        ['hex' => '#6b7280', 'twLabel' => 'gray-500',  'twBgLabel' => 'bg-gray-500',  'twTextLabel' => 'text-gray-500'],
+        ['hex' => '#4b5563', 'twLabel' => 'gray-600',  'twBgLabel' => 'bg-gray-600',  'twTextLabel' => 'text-gray-600'],
+        ['hex' => '#374151', 'twLabel' => 'gray-700',  'twBgLabel' => 'bg-gray-700',  'twTextLabel' => 'text-gray-700'],
+        ['hex' => '#1f2937', 'twLabel' => 'gray-800',  'twBgLabel' => 'bg-gray-800',  'twTextLabel' => 'text-gray-800'],
+        ['hex' => '#111827', 'twLabel' => 'gray-900',  'twBgLabel' => 'bg-gray-900',  'twTextLabel' => 'text-gray-900'],
+
         // Zinc
-        ['hex' => '#fafafa', 'twLabel' => 'zinc-50',   'twBgLabel' => 'bg-zinc-50',   'twTextLabel' => 'text-zinc-50'], 
-        ['hex' => '#f4f4f5', 'twLabel' => 'zinc-100',  'twBgLabel' => 'bg-zinc-100',  'twTextLabel' => 'text-zinc-100'], 
-        ['hex' => '#e4e4e7', 'twLabel' => 'zinc-200',  'twBgLabel' => 'bg-zinc-200',  'twTextLabel' => 'text-zinc-200'], 
-        ['hex' => '#d4d4d8', 'twLabel' => 'zinc-300',  'twBgLabel' => 'bg-zinc-300',  'twTextLabel' => 'text-zinc-300'], 
-        ['hex' => '#a1a1aa', 'twLabel' => 'zinc-400',  'twBgLabel' => 'bg-zinc-400',  'twTextLabel' => 'text-zinc-400'], 
-        ['hex' => '#71717a', 'twLabel' => 'zinc-500',  'twBgLabel' => 'bg-zinc-500',  'twTextLabel' => 'text-zinc-500'], 
-        ['hex' => '#52525b', 'twLabel' => 'zinc-600',  'twBgLabel' => 'bg-zinc-600',  'twTextLabel' => 'text-zinc-600'], 
-        ['hex' => '#3f3f46', 'twLabel' => 'zinc-700',  'twBgLabel' => 'bg-zinc-700',  'twTextLabel' => 'text-zinc-700'], 
-        ['hex' => '#27272a', 'twLabel' => 'zinc-800',  'twBgLabel' => 'bg-zinc-800',  'twTextLabel' => 'text-zinc-800'], 
-        ['hex' => '#18181b', 'twLabel' => 'zinc-900',  'twBgLabel' => 'bg-zinc-900',  'twTextLabel' => 'text-zinc-900'], 
+        ['hex' => '#fafafa', 'twLabel' => 'zinc-50',   'twBgLabel' => 'bg-zinc-50',   'twTextLabel' => 'text-zinc-50'],
+        ['hex' => '#f4f4f5', 'twLabel' => 'zinc-100',  'twBgLabel' => 'bg-zinc-100',  'twTextLabel' => 'text-zinc-100'],
+        ['hex' => '#e4e4e7', 'twLabel' => 'zinc-200',  'twBgLabel' => 'bg-zinc-200',  'twTextLabel' => 'text-zinc-200'],
+        ['hex' => '#d4d4d8', 'twLabel' => 'zinc-300',  'twBgLabel' => 'bg-zinc-300',  'twTextLabel' => 'text-zinc-300'],
+        ['hex' => '#a1a1aa', 'twLabel' => 'zinc-400',  'twBgLabel' => 'bg-zinc-400',  'twTextLabel' => 'text-zinc-400'],
+        ['hex' => '#71717a', 'twLabel' => 'zinc-500',  'twBgLabel' => 'bg-zinc-500',  'twTextLabel' => 'text-zinc-500'],
+        ['hex' => '#52525b', 'twLabel' => 'zinc-600',  'twBgLabel' => 'bg-zinc-600',  'twTextLabel' => 'text-zinc-600'],
+        ['hex' => '#3f3f46', 'twLabel' => 'zinc-700',  'twBgLabel' => 'bg-zinc-700',  'twTextLabel' => 'text-zinc-700'],
+        ['hex' => '#27272a', 'twLabel' => 'zinc-800',  'twBgLabel' => 'bg-zinc-800',  'twTextLabel' => 'text-zinc-800'],
+        ['hex' => '#18181b', 'twLabel' => 'zinc-900',  'twBgLabel' => 'bg-zinc-900',  'twTextLabel' => 'text-zinc-900'],
 
         // Neutral
-        ['hex' => '#fafafa', 'twLabel' => 'neutral-50', 'twLabel' => 'neutral-50', 'twLabel' => 'neutral-50'], 
-        ['hex' => '#f5f5f5', 'twLabel' => 'neutral-100', 'twLabel' => 'neutral-100', 'twLabel' => 'neutral-100'], 
-        ['hex' => '#e5e5e5', 'twLabel' => 'neutral-200', 'twLabel' => 'neutral-200', 'twLabel' => 'neutral-200'], 
-        ['hex' => '#d4d4d4', 'twLabel' => 'neutral-300', 'twLabel' => 'neutral-300', 'twLabel' => 'neutral-300'], 
-        ['hex' => '#a3a3a3', 'twLabel' => 'neutral-400', 'twLabel' => 'neutral-400', 'twLabel' => 'neutral-400'], 
-        ['hex' => '#737373', 'twLabel' => 'neutral-500', 'twLabel' => 'neutral-500', 'twLabel' => 'neutral-500'], 
-        ['hex' => '#525252', 'twLabel' => 'neutral-600', 'twLabel' => 'neutral-600', 'twLabel' => 'neutral-600'], 
-        ['hex' => '#404040', 'twLabel' => 'neutral-700', 'twLabel' => 'neutral-700', 'twLabel' => 'neutral-700'], 
-        ['hex' => '#262626', 'twLabel' => 'neutral-800', 'twLabel' => 'neutral-800', 'twLabel' => 'neutral-800'], 
-        ['hex' => '#171717', 'twLabel' => 'neutral-900', 'twLabel' => 'neutral-900', 'twLabel' => 'neutral-900'], 
+        ['hex' => '#fafafa', 'twLabel' => 'neutral-50', 'twLabel' => 'neutral-50', 'twLabel' => 'neutral-50'],
+        ['hex' => '#f5f5f5', 'twLabel' => 'neutral-100', 'twLabel' => 'neutral-100', 'twLabel' => 'neutral-100'],
+        ['hex' => '#e5e5e5', 'twLabel' => 'neutral-200', 'twLabel' => 'neutral-200', 'twLabel' => 'neutral-200'],
+        ['hex' => '#d4d4d4', 'twLabel' => 'neutral-300', 'twLabel' => 'neutral-300', 'twLabel' => 'neutral-300'],
+        ['hex' => '#a3a3a3', 'twLabel' => 'neutral-400', 'twLabel' => 'neutral-400', 'twLabel' => 'neutral-400'],
+        ['hex' => '#737373', 'twLabel' => 'neutral-500', 'twLabel' => 'neutral-500', 'twLabel' => 'neutral-500'],
+        ['hex' => '#525252', 'twLabel' => 'neutral-600', 'twLabel' => 'neutral-600', 'twLabel' => 'neutral-600'],
+        ['hex' => '#404040', 'twLabel' => 'neutral-700', 'twLabel' => 'neutral-700', 'twLabel' => 'neutral-700'],
+        ['hex' => '#262626', 'twLabel' => 'neutral-800', 'twLabel' => 'neutral-800', 'twLabel' => 'neutral-800'],
+        ['hex' => '#171717', 'twLabel' => 'neutral-900', 'twLabel' => 'neutral-900', 'twLabel' => 'neutral-900'],
 
         // Stone
-        ['hex' => '#fafaf9', 'twLabel' => 'stone-50',  'twBgLabel' => 'bg-stone-50',  'twTextLabel' => 'text-stone-50'], 
-        ['hex' => '#f5f5f4', 'twLabel' => 'stone-100', 'twBgLabel' => 'bg-stone-100', 'twTextLabel' => 'text-stone-100'], 
-        ['hex' => '#e7e5e4', 'twLabel' => 'stone-200', 'twBgLabel' => 'bg-stone-200', 'twTextLabel' => 'text-stone-200'], 
-        ['hex' => '#d6d3d1', 'twLabel' => 'stone-300', 'twBgLabel' => 'bg-stone-300', 'twTextLabel' => 'text-stone-300'], 
-        ['hex' => '#a8a29e', 'twLabel' => 'stone-400', 'twBgLabel' => 'bg-stone-400', 'twTextLabel' => 'text-stone-400'], 
-        ['hex' => '#78716c', 'twLabel' => 'stone-500', 'twBgLabel' => 'bg-stone-500', 'twTextLabel' => 'text-stone-500'], 
-        ['hex' => '#57534e', 'twLabel' => 'stone-600', 'twBgLabel' => 'bg-stone-600', 'twTextLabel' => 'text-stone-600'], 
-        ['hex' => '#44403c', 'twLabel' => 'stone-700', 'twBgLabel' => 'bg-stone-700', 'twTextLabel' => 'text-stone-700'], 
-        ['hex' => '#292524', 'twLabel' => 'stone-800', 'twBgLabel' => 'bg-stone-800', 'twTextLabel' => 'text-stone-800'], 
-        ['hex' => '#1c1917', 'twLabel' => 'stone-900', 'twBgLabel' => 'bg-stone-900', 'twTextLabel' => 'text-stone-900'], 
+        ['hex' => '#fafaf9', 'twLabel' => 'stone-50',  'twBgLabel' => 'bg-stone-50',  'twTextLabel' => 'text-stone-50'],
+        ['hex' => '#f5f5f4', 'twLabel' => 'stone-100', 'twBgLabel' => 'bg-stone-100', 'twTextLabel' => 'text-stone-100'],
+        ['hex' => '#e7e5e4', 'twLabel' => 'stone-200', 'twBgLabel' => 'bg-stone-200', 'twTextLabel' => 'text-stone-200'],
+        ['hex' => '#d6d3d1', 'twLabel' => 'stone-300', 'twBgLabel' => 'bg-stone-300', 'twTextLabel' => 'text-stone-300'],
+        ['hex' => '#a8a29e', 'twLabel' => 'stone-400', 'twBgLabel' => 'bg-stone-400', 'twTextLabel' => 'text-stone-400'],
+        ['hex' => '#78716c', 'twLabel' => 'stone-500', 'twBgLabel' => 'bg-stone-500', 'twTextLabel' => 'text-stone-500'],
+        ['hex' => '#57534e', 'twLabel' => 'stone-600', 'twBgLabel' => 'bg-stone-600', 'twTextLabel' => 'text-stone-600'],
+        ['hex' => '#44403c', 'twLabel' => 'stone-700', 'twBgLabel' => 'bg-stone-700', 'twTextLabel' => 'text-stone-700'],
+        ['hex' => '#292524', 'twLabel' => 'stone-800', 'twBgLabel' => 'bg-stone-800', 'twTextLabel' => 'text-stone-800'],
+        ['hex' => '#1c1917', 'twLabel' => 'stone-900', 'twBgLabel' => 'bg-stone-900', 'twTextLabel' => 'text-stone-900'],
 
         // Red
-        ['hex' => '#fef2f2', 'twLabel' => 'red-50',  'twBgLabel' => 'bg-red-50',  'twTextLabel' => 'text-red-50'], 
-        ['hex' => '#fee2e2', 'twLabel' => 'red-100', 'twBgLabel' => 'bg-red-100', 'twTextLabel' => 'text-red-100'], 
-        ['hex' => '#fecaca', 'twLabel' => 'red-200', 'twBgLabel' => 'bg-red-200', 'twTextLabel' => 'text-red-200'], 
-        ['hex' => '#fca5a5', 'twLabel' => 'red-300', 'twBgLabel' => 'bg-red-300', 'twTextLabel' => 'text-red-300'], 
-        ['hex' => '#f87171', 'twLabel' => 'red-400', 'twBgLabel' => 'bg-red-400', 'twTextLabel' => 'text-red-400'], 
-        ['hex' => '#ef4444', 'twLabel' => 'red-500', 'twBgLabel' => 'bg-red-500', 'twTextLabel' => 'text-red-500'], 
-        ['hex' => '#dc2626', 'twLabel' => 'red-600', 'twBgLabel' => 'bg-red-600', 'twTextLabel' => 'text-red-600'], 
-        ['hex' => '#b91c1c', 'twLabel' => 'red-700', 'twBgLabel' => 'bg-red-700', 'twTextLabel' => 'text-red-700'], 
-        ['hex' => '#991b1b', 'twLabel' => 'red-800', 'twBgLabel' => 'bg-red-800', 'twTextLabel' => 'text-red-800'], 
-        ['hex' => '#7f1d1d', 'twLabel' => 'red-900', 'twBgLabel' => 'bg-red-900', 'twTextLabel' => 'text-red-900'], 
+        ['hex' => '#fef2f2', 'twLabel' => 'red-50',  'twBgLabel' => 'bg-red-50',  'twTextLabel' => 'text-red-50'],
+        ['hex' => '#fee2e2', 'twLabel' => 'red-100', 'twBgLabel' => 'bg-red-100', 'twTextLabel' => 'text-red-100'],
+        ['hex' => '#fecaca', 'twLabel' => 'red-200', 'twBgLabel' => 'bg-red-200', 'twTextLabel' => 'text-red-200'],
+        ['hex' => '#fca5a5', 'twLabel' => 'red-300', 'twBgLabel' => 'bg-red-300', 'twTextLabel' => 'text-red-300'],
+        ['hex' => '#f87171', 'twLabel' => 'red-400', 'twBgLabel' => 'bg-red-400', 'twTextLabel' => 'text-red-400'],
+        ['hex' => '#ef4444', 'twLabel' => 'red-500', 'twBgLabel' => 'bg-red-500', 'twTextLabel' => 'text-red-500'],
+        ['hex' => '#dc2626', 'twLabel' => 'red-600', 'twBgLabel' => 'bg-red-600', 'twTextLabel' => 'text-red-600'],
+        ['hex' => '#b91c1c', 'twLabel' => 'red-700', 'twBgLabel' => 'bg-red-700', 'twTextLabel' => 'text-red-700'],
+        ['hex' => '#991b1b', 'twLabel' => 'red-800', 'twBgLabel' => 'bg-red-800', 'twTextLabel' => 'text-red-800'],
+        ['hex' => '#7f1d1d', 'twLabel' => 'red-900', 'twBgLabel' => 'bg-red-900', 'twTextLabel' => 'text-red-900'],
 
         // Orange
-        ['hex' => '#fff7ed', 'twLabel' => 'orange-50',  'twBgLabel' => 'bg-orange-50',  'twTextLabel' => 'text-orange-50'], 
-        ['hex' => '#ffedd5', 'twLabel' => 'orange-100', 'twBgLabel' => 'bg-orange-100', 'twTextLabel' => 'text-orange-100'], 
-        ['hex' => '#fed7aa', 'twLabel' => 'orange-200', 'twBgLabel' => 'bg-orange-200', 'twTextLabel' => 'text-orange-200'], 
-        ['hex' => '#fdba74', 'twLabel' => 'orange-300', 'twBgLabel' => 'bg-orange-300', 'twTextLabel' => 'text-orange-300'], 
-        ['hex' => '#fb923c', 'twLabel' => 'orange-400', 'twBgLabel' => 'bg-orange-400', 'twTextLabel' => 'text-orange-400'], 
-        ['hex' => '#f97316', 'twLabel' => 'orange-500', 'twBgLabel' => 'bg-orange-500', 'twTextLabel' => 'text-orange-500'], 
-        ['hex' => '#ea580c', 'twLabel' => 'orange-600', 'twBgLabel' => 'bg-orange-600', 'twTextLabel' => 'text-orange-600'], 
-        ['hex' => '#c2410c', 'twLabel' => 'orange-700', 'twBgLabel' => 'bg-orange-700', 'twTextLabel' => 'text-orange-700'], 
-        ['hex' => '#9a3412', 'twLabel' => 'orange-800', 'twBgLabel' => 'bg-orange-800', 'twTextLabel' => 'text-orange-800'], 
-        ['hex' => '#7c2d12', 'twLabel' => 'orange-900', 'twBgLabel' => 'bg-orange-900', 'twTextLabel' => 'text-orange-900'], 
+        ['hex' => '#fff7ed', 'twLabel' => 'orange-50',  'twBgLabel' => 'bg-orange-50',  'twTextLabel' => 'text-orange-50'],
+        ['hex' => '#ffedd5', 'twLabel' => 'orange-100', 'twBgLabel' => 'bg-orange-100', 'twTextLabel' => 'text-orange-100'],
+        ['hex' => '#fed7aa', 'twLabel' => 'orange-200', 'twBgLabel' => 'bg-orange-200', 'twTextLabel' => 'text-orange-200'],
+        ['hex' => '#fdba74', 'twLabel' => 'orange-300', 'twBgLabel' => 'bg-orange-300', 'twTextLabel' => 'text-orange-300'],
+        ['hex' => '#fb923c', 'twLabel' => 'orange-400', 'twBgLabel' => 'bg-orange-400', 'twTextLabel' => 'text-orange-400'],
+        ['hex' => '#f97316', 'twLabel' => 'orange-500', 'twBgLabel' => 'bg-orange-500', 'twTextLabel' => 'text-orange-500'],
+        ['hex' => '#ea580c', 'twLabel' => 'orange-600', 'twBgLabel' => 'bg-orange-600', 'twTextLabel' => 'text-orange-600'],
+        ['hex' => '#c2410c', 'twLabel' => 'orange-700', 'twBgLabel' => 'bg-orange-700', 'twTextLabel' => 'text-orange-700'],
+        ['hex' => '#9a3412', 'twLabel' => 'orange-800', 'twBgLabel' => 'bg-orange-800', 'twTextLabel' => 'text-orange-800'],
+        ['hex' => '#7c2d12', 'twLabel' => 'orange-900', 'twBgLabel' => 'bg-orange-900', 'twTextLabel' => 'text-orange-900'],
 
         // Amber
-        ['hex' => '#fffbeb', 'twLabel' => 'amber-50',  'twBgLabel' => 'bg-amber-50',  'twTextLabel' => 'text-amber-50'], 
-        ['hex' => '#fef3c7', 'twLabel' => 'amber-100', 'twBgLabel' => 'bg-amber-100', 'twTextLabel' => 'text-amber-100'], 
-        ['hex' => '#fde68a', 'twLabel' => 'amber-200', 'twBgLabel' => 'bg-amber-200', 'twTextLabel' => 'text-amber-200'], 
-        ['hex' => '#fcd34d', 'twLabel' => 'amber-300', 'twBgLabel' => 'bg-amber-300', 'twTextLabel' => 'text-amber-300'], 
-        ['hex' => '#fbbf24', 'twLabel' => 'amber-400', 'twBgLabel' => 'bg-amber-400', 'twTextLabel' => 'text-amber-400'], 
-        ['hex' => '#f59e0b', 'twLabel' => 'amber-500', 'twBgLabel' => 'bg-amber-500', 'twTextLabel' => 'text-amber-500'], 
-        ['hex' => '#d97706', 'twLabel' => 'amber-600', 'twBgLabel' => 'bg-amber-600', 'twTextLabel' => 'text-amber-600'], 
-        ['hex' => '#b45309', 'twLabel' => 'amber-700', 'twBgLabel' => 'bg-amber-700', 'twTextLabel' => 'text-amber-700'], 
-        ['hex' => '#92400e', 'twLabel' => 'amber-800', 'twBgLabel' => 'bg-amber-800', 'twTextLabel' => 'text-amber-800'], 
-        ['hex' => '#78350f', 'twLabel' => 'amber-900', 'twBgLabel' => 'bg-amber-900', 'twTextLabel' => 'text-amber-900'], 
+        ['hex' => '#fffbeb', 'twLabel' => 'amber-50',  'twBgLabel' => 'bg-amber-50',  'twTextLabel' => 'text-amber-50'],
+        ['hex' => '#fef3c7', 'twLabel' => 'amber-100', 'twBgLabel' => 'bg-amber-100', 'twTextLabel' => 'text-amber-100'],
+        ['hex' => '#fde68a', 'twLabel' => 'amber-200', 'twBgLabel' => 'bg-amber-200', 'twTextLabel' => 'text-amber-200'],
+        ['hex' => '#fcd34d', 'twLabel' => 'amber-300', 'twBgLabel' => 'bg-amber-300', 'twTextLabel' => 'text-amber-300'],
+        ['hex' => '#fbbf24', 'twLabel' => 'amber-400', 'twBgLabel' => 'bg-amber-400', 'twTextLabel' => 'text-amber-400'],
+        ['hex' => '#f59e0b', 'twLabel' => 'amber-500', 'twBgLabel' => 'bg-amber-500', 'twTextLabel' => 'text-amber-500'],
+        ['hex' => '#d97706', 'twLabel' => 'amber-600', 'twBgLabel' => 'bg-amber-600', 'twTextLabel' => 'text-amber-600'],
+        ['hex' => '#b45309', 'twLabel' => 'amber-700', 'twBgLabel' => 'bg-amber-700', 'twTextLabel' => 'text-amber-700'],
+        ['hex' => '#92400e', 'twLabel' => 'amber-800', 'twBgLabel' => 'bg-amber-800', 'twTextLabel' => 'text-amber-800'],
+        ['hex' => '#78350f', 'twLabel' => 'amber-900', 'twBgLabel' => 'bg-amber-900', 'twTextLabel' => 'text-amber-900'],
 
         // Yellow
-        ['hex' => '#fefce8', 'twLabel' => 'yellow-50',  'twBgLabel' => 'bg-yellow-50',  'twTextLabel' => 'text-yellow-50'], 
-        ['hex' => '#fef9c3', 'twLabel' => 'yellow-100', 'twBgLabel' => 'bg-yellow-100', 'twTextLabel' => 'text-yellow-100'], 
-        ['hex' => '#fef08a', 'twLabel' => 'yellow-200', 'twBgLabel' => 'bg-yellow-200', 'twTextLabel' => 'text-yellow-200'], 
-        ['hex' => '#fde047', 'twLabel' => 'yellow-300', 'twBgLabel' => 'bg-yellow-300', 'twTextLabel' => 'text-yellow-300'], 
-        ['hex' => '#facc15', 'twLabel' => 'yellow-400', 'twBgLabel' => 'bg-yellow-400', 'twTextLabel' => 'text-yellow-400'], 
-        ['hex' => '#eab308', 'twLabel' => 'yellow-500', 'twBgLabel' => 'bg-yellow-500', 'twTextLabel' => 'text-yellow-500'], 
-        ['hex' => '#ca8a04', 'twLabel' => 'yellow-600', 'twBgLabel' => 'bg-yellow-600', 'twTextLabel' => 'text-yellow-600'], 
-        ['hex' => '#a16207', 'twLabel' => 'yellow-700', 'twBgLabel' => 'bg-yellow-700', 'twTextLabel' => 'text-yellow-700'], 
-        ['hex' => '#854d0e', 'twLabel' => 'yellow-800', 'twBgLabel' => 'bg-yellow-800', 'twTextLabel' => 'text-yellow-800'], 
-        ['hex' => '#713f12', 'twLabel' => 'yellow-900', 'twBgLabel' => 'bg-yellow-900', 'twTextLabel' => 'text-yellow-900'], 
+        ['hex' => '#fefce8', 'twLabel' => 'yellow-50',  'twBgLabel' => 'bg-yellow-50',  'twTextLabel' => 'text-yellow-50'],
+        ['hex' => '#fef9c3', 'twLabel' => 'yellow-100', 'twBgLabel' => 'bg-yellow-100', 'twTextLabel' => 'text-yellow-100'],
+        ['hex' => '#fef08a', 'twLabel' => 'yellow-200', 'twBgLabel' => 'bg-yellow-200', 'twTextLabel' => 'text-yellow-200'],
+        ['hex' => '#fde047', 'twLabel' => 'yellow-300', 'twBgLabel' => 'bg-yellow-300', 'twTextLabel' => 'text-yellow-300'],
+        ['hex' => '#facc15', 'twLabel' => 'yellow-400', 'twBgLabel' => 'bg-yellow-400', 'twTextLabel' => 'text-yellow-400'],
+        ['hex' => '#eab308', 'twLabel' => 'yellow-500', 'twBgLabel' => 'bg-yellow-500', 'twTextLabel' => 'text-yellow-500'],
+        ['hex' => '#ca8a04', 'twLabel' => 'yellow-600', 'twBgLabel' => 'bg-yellow-600', 'twTextLabel' => 'text-yellow-600'],
+        ['hex' => '#a16207', 'twLabel' => 'yellow-700', 'twBgLabel' => 'bg-yellow-700', 'twTextLabel' => 'text-yellow-700'],
+        ['hex' => '#854d0e', 'twLabel' => 'yellow-800', 'twBgLabel' => 'bg-yellow-800', 'twTextLabel' => 'text-yellow-800'],
+        ['hex' => '#713f12', 'twLabel' => 'yellow-900', 'twBgLabel' => 'bg-yellow-900', 'twTextLabel' => 'text-yellow-900'],
 
         // Green
-        ['hex' => '#f0fdf4', 'twLabel' => 'green-50',  'twBgLabel' => 'bg-green-50',  'twTextLabel' => 'text-green-50'], 
-        ['hex' => '#dcfce7', 'twLabel' => 'green-100', 'twBgLabel' => 'bg-green-100', 'twTextLabel' => 'text-green-100'], 
-        ['hex' => '#bbf7d0', 'twLabel' => 'green-200', 'twBgLabel' => 'bg-green-200', 'twTextLabel' => 'text-green-200'], 
-        ['hex' => '#86efac', 'twLabel' => 'green-300', 'twBgLabel' => 'bg-green-300', 'twTextLabel' => 'text-green-300'], 
-        ['hex' => '#4ade80', 'twLabel' => 'green-400', 'twBgLabel' => 'bg-green-400', 'twTextLabel' => 'text-green-400'], 
-        ['hex' => '#22c55e', 'twLabel' => 'green-500', 'twBgLabel' => 'bg-green-500', 'twTextLabel' => 'text-green-500'], 
-        ['hex' => '#16a34a', 'twLabel' => 'green-600', 'twBgLabel' => 'bg-green-600', 'twTextLabel' => 'text-green-600'], 
-        ['hex' => '#15803d', 'twLabel' => 'green-700', 'twBgLabel' => 'bg-green-700', 'twTextLabel' => 'text-green-700'], 
-        ['hex' => '#166534', 'twLabel' => 'green-800', 'twBgLabel' => 'bg-green-800', 'twTextLabel' => 'text-green-800'], 
-        ['hex' => '#14532d', 'twLabel' => 'green-900', 'twBgLabel' => 'bg-green-900', 'twTextLabel' => 'text-green-900'], 
+        ['hex' => '#f0fdf4', 'twLabel' => 'green-50',  'twBgLabel' => 'bg-green-50',  'twTextLabel' => 'text-green-50'],
+        ['hex' => '#dcfce7', 'twLabel' => 'green-100', 'twBgLabel' => 'bg-green-100', 'twTextLabel' => 'text-green-100'],
+        ['hex' => '#bbf7d0', 'twLabel' => 'green-200', 'twBgLabel' => 'bg-green-200', 'twTextLabel' => 'text-green-200'],
+        ['hex' => '#86efac', 'twLabel' => 'green-300', 'twBgLabel' => 'bg-green-300', 'twTextLabel' => 'text-green-300'],
+        ['hex' => '#4ade80', 'twLabel' => 'green-400', 'twBgLabel' => 'bg-green-400', 'twTextLabel' => 'text-green-400'],
+        ['hex' => '#22c55e', 'twLabel' => 'green-500', 'twBgLabel' => 'bg-green-500', 'twTextLabel' => 'text-green-500'],
+        ['hex' => '#16a34a', 'twLabel' => 'green-600', 'twBgLabel' => 'bg-green-600', 'twTextLabel' => 'text-green-600'],
+        ['hex' => '#15803d', 'twLabel' => 'green-700', 'twBgLabel' => 'bg-green-700', 'twTextLabel' => 'text-green-700'],
+        ['hex' => '#166534', 'twLabel' => 'green-800', 'twBgLabel' => 'bg-green-800', 'twTextLabel' => 'text-green-800'],
+        ['hex' => '#14532d', 'twLabel' => 'green-900', 'twBgLabel' => 'bg-green-900', 'twTextLabel' => 'text-green-900'],
 
         // Emerald
-        ['hex' => '#ecfdf5', 'twLabel' => 'emerald-50',  'twBgLabel' => 'bg-emerald-50',  'twTextLabel' => 'text-emerald-50'], 
-        ['hex' => '#d1fae5', 'twLabel' => 'emerald-100', 'twBgLabel' => 'bg-emerald-100', 'twTextLabel' => 'text-emerald-100'], 
-        ['hex' => '#a7f3d0', 'twLabel' => 'emerald-200', 'twBgLabel' => 'bg-emerald-200', 'twTextLabel' => 'text-emerald-200'], 
-        ['hex' => '#6ee7b7', 'twLabel' => 'emerald-300', 'twBgLabel' => 'bg-emerald-300', 'twTextLabel' => 'text-emerald-300'], 
-        ['hex' => '#34d399', 'twLabel' => 'emerald-400', 'twBgLabel' => 'bg-emerald-400', 'twTextLabel' => 'text-emerald-400'], 
-        ['hex' => '#10b981', 'twLabel' => 'emerald-500', 'twBgLabel' => 'bg-emerald-500', 'twTextLabel' => 'text-emerald-500'], 
-        ['hex' => '#059669', 'twLabel' => 'emerald-600', 'twBgLabel' => 'bg-emerald-600', 'twTextLabel' => 'text-emerald-600'], 
-        ['hex' => '#047857', 'twLabel' => 'emerald-700', 'twBgLabel' => 'bg-emerald-700', 'twTextLabel' => 'text-emerald-700'], 
-        ['hex' => '#065f46', 'twLabel' => 'emerald-800', 'twBgLabel' => 'bg-emerald-800', 'twTextLabel' => 'text-emerald-800'], 
-        ['hex' => '#064e3b', 'twLabel' => 'emerald-900', 'twBgLabel' => 'bg-emerald-900', 'twTextLabel' => 'text-emerald-900'], 
+        ['hex' => '#ecfdf5', 'twLabel' => 'emerald-50',  'twBgLabel' => 'bg-emerald-50',  'twTextLabel' => 'text-emerald-50'],
+        ['hex' => '#d1fae5', 'twLabel' => 'emerald-100', 'twBgLabel' => 'bg-emerald-100', 'twTextLabel' => 'text-emerald-100'],
+        ['hex' => '#a7f3d0', 'twLabel' => 'emerald-200', 'twBgLabel' => 'bg-emerald-200', 'twTextLabel' => 'text-emerald-200'],
+        ['hex' => '#6ee7b7', 'twLabel' => 'emerald-300', 'twBgLabel' => 'bg-emerald-300', 'twTextLabel' => 'text-emerald-300'],
+        ['hex' => '#34d399', 'twLabel' => 'emerald-400', 'twBgLabel' => 'bg-emerald-400', 'twTextLabel' => 'text-emerald-400'],
+        ['hex' => '#10b981', 'twLabel' => 'emerald-500', 'twBgLabel' => 'bg-emerald-500', 'twTextLabel' => 'text-emerald-500'],
+        ['hex' => '#059669', 'twLabel' => 'emerald-600', 'twBgLabel' => 'bg-emerald-600', 'twTextLabel' => 'text-emerald-600'],
+        ['hex' => '#047857', 'twLabel' => 'emerald-700', 'twBgLabel' => 'bg-emerald-700', 'twTextLabel' => 'text-emerald-700'],
+        ['hex' => '#065f46', 'twLabel' => 'emerald-800', 'twBgLabel' => 'bg-emerald-800', 'twTextLabel' => 'text-emerald-800'],
+        ['hex' => '#064e3b', 'twLabel' => 'emerald-900', 'twBgLabel' => 'bg-emerald-900', 'twTextLabel' => 'text-emerald-900'],
 
         // Teal
-        ['hex' => '#f0fdfa', 'twLabel' => 'teal-50',  'twBgLabel' => 'bg-teal-50',  'twTextLabel' => 'text-teal-50'], 
-        ['hex' => '#ccfbf1', 'twLabel' => 'teal-100', 'twBgLabel' => 'bg-teal-100', 'twTextLabel' => 'text-teal-100'], 
-        ['hex' => '#99f6e4', 'twLabel' => 'teal-200', 'twBgLabel' => 'bg-teal-200', 'twTextLabel' => 'text-teal-200'], 
-        ['hex' => '#5eead4', 'twLabel' => 'teal-300', 'twBgLabel' => 'bg-teal-300', 'twTextLabel' => 'text-teal-300'], 
-        ['hex' => '#2dd4bf', 'twLabel' => 'teal-400', 'twBgLabel' => 'bg-teal-400', 'twTextLabel' => 'text-teal-400'], 
-        ['hex' => '#14b8a6', 'twLabel' => 'teal-500', 'twBgLabel' => 'bg-teal-500', 'twTextLabel' => 'text-teal-500'], 
-        ['hex' => '#0d9488', 'twLabel' => 'teal-600', 'twBgLabel' => 'bg-teal-600', 'twTextLabel' => 'text-teal-600'], 
-        ['hex' => '#0f766e', 'twLabel' => 'teal-700', 'twBgLabel' => 'bg-teal-700', 'twTextLabel' => 'text-teal-700'], 
-        ['hex' => '#115e59', 'twLabel' => 'teal-800', 'twBgLabel' => 'bg-teal-800', 'twTextLabel' => 'text-teal-800'], 
-        ['hex' => '#134e4a', 'twLabel' => 'teal-900', 'twBgLabel' => 'bg-teal-900', 'twTextLabel' => 'text-teal-900'], 
+        ['hex' => '#f0fdfa', 'twLabel' => 'teal-50',  'twBgLabel' => 'bg-teal-50',  'twTextLabel' => 'text-teal-50'],
+        ['hex' => '#ccfbf1', 'twLabel' => 'teal-100', 'twBgLabel' => 'bg-teal-100', 'twTextLabel' => 'text-teal-100'],
+        ['hex' => '#99f6e4', 'twLabel' => 'teal-200', 'twBgLabel' => 'bg-teal-200', 'twTextLabel' => 'text-teal-200'],
+        ['hex' => '#5eead4', 'twLabel' => 'teal-300', 'twBgLabel' => 'bg-teal-300', 'twTextLabel' => 'text-teal-300'],
+        ['hex' => '#2dd4bf', 'twLabel' => 'teal-400', 'twBgLabel' => 'bg-teal-400', 'twTextLabel' => 'text-teal-400'],
+        ['hex' => '#14b8a6', 'twLabel' => 'teal-500', 'twBgLabel' => 'bg-teal-500', 'twTextLabel' => 'text-teal-500'],
+        ['hex' => '#0d9488', 'twLabel' => 'teal-600', 'twBgLabel' => 'bg-teal-600', 'twTextLabel' => 'text-teal-600'],
+        ['hex' => '#0f766e', 'twLabel' => 'teal-700', 'twBgLabel' => 'bg-teal-700', 'twTextLabel' => 'text-teal-700'],
+        ['hex' => '#115e59', 'twLabel' => 'teal-800', 'twBgLabel' => 'bg-teal-800', 'twTextLabel' => 'text-teal-800'],
+        ['hex' => '#134e4a', 'twLabel' => 'teal-900', 'twBgLabel' => 'bg-teal-900', 'twTextLabel' => 'text-teal-900'],
 
         // Cyan
-        ['hex' => '#ecfeff', 'twLabel' => 'cyan-50',  'twBgLabel' => 'bg-cyan-50',  'twTextLabel' => 'text-cyan-50'], 
-        ['hex' => '#cffafe', 'twLabel' => 'cyan-100', 'twBgLabel' => 'bg-cyan-100', 'twTextLabel' => 'text-cyan-100'], 
-        ['hex' => '#a5f3fc', 'twLabel' => 'cyan-200', 'twBgLabel' => 'bg-cyan-200', 'twTextLabel' => 'text-cyan-200'], 
-        ['hex' => '#67e8f9', 'twLabel' => 'cyan-300', 'twBgLabel' => 'bg-cyan-300', 'twTextLabel' => 'text-cyan-300'], 
-        ['hex' => '#22d3ee', 'twLabel' => 'cyan-400', 'twBgLabel' => 'bg-cyan-400', 'twTextLabel' => 'text-cyan-400'], 
-        ['hex' => '#06b6d4', 'twLabel' => 'cyan-500', 'twBgLabel' => 'bg-cyan-500', 'twTextLabel' => 'text-cyan-500'], 
-        ['hex' => '#0891b2', 'twLabel' => 'cyan-600', 'twBgLabel' => 'bg-cyan-600', 'twTextLabel' => 'text-cyan-600'], 
-        ['hex' => '#0e7490', 'twLabel' => 'cyan-700', 'twBgLabel' => 'bg-cyan-700', 'twTextLabel' => 'text-cyan-700'], 
-        ['hex' => '#155e75', 'twLabel' => 'cyan-800', 'twBgLabel' => 'bg-cyan-800', 'twTextLabel' => 'text-cyan-800'], 
-        ['hex' => '#164e63', 'twLabel' => 'cyan-900', 'twBgLabel' => 'bg-cyan-900', 'twTextLabel' => 'text-cyan-900'], 
+        ['hex' => '#ecfeff', 'twLabel' => 'cyan-50',  'twBgLabel' => 'bg-cyan-50',  'twTextLabel' => 'text-cyan-50'],
+        ['hex' => '#cffafe', 'twLabel' => 'cyan-100', 'twBgLabel' => 'bg-cyan-100', 'twTextLabel' => 'text-cyan-100'],
+        ['hex' => '#a5f3fc', 'twLabel' => 'cyan-200', 'twBgLabel' => 'bg-cyan-200', 'twTextLabel' => 'text-cyan-200'],
+        ['hex' => '#67e8f9', 'twLabel' => 'cyan-300', 'twBgLabel' => 'bg-cyan-300', 'twTextLabel' => 'text-cyan-300'],
+        ['hex' => '#22d3ee', 'twLabel' => 'cyan-400', 'twBgLabel' => 'bg-cyan-400', 'twTextLabel' => 'text-cyan-400'],
+        ['hex' => '#06b6d4', 'twLabel' => 'cyan-500', 'twBgLabel' => 'bg-cyan-500', 'twTextLabel' => 'text-cyan-500'],
+        ['hex' => '#0891b2', 'twLabel' => 'cyan-600', 'twBgLabel' => 'bg-cyan-600', 'twTextLabel' => 'text-cyan-600'],
+        ['hex' => '#0e7490', 'twLabel' => 'cyan-700', 'twBgLabel' => 'bg-cyan-700', 'twTextLabel' => 'text-cyan-700'],
+        ['hex' => '#155e75', 'twLabel' => 'cyan-800', 'twBgLabel' => 'bg-cyan-800', 'twTextLabel' => 'text-cyan-800'],
+        ['hex' => '#164e63', 'twLabel' => 'cyan-900', 'twBgLabel' => 'bg-cyan-900', 'twTextLabel' => 'text-cyan-900'],
 
         // Sky
-        ['hex' => '#f0f9ff', 'twLabel' => 'sky-50',  'twBgLabel' => 'bg-sky-50',  'twTextLabel' => 'text-sky-50'], 
-        ['hex' => '#e0f2fe', 'twLabel' => 'sky-100', 'twBgLabel' => 'bg-sky-100', 'twTextLabel' => 'text-sky-100'], 
-        ['hex' => '#bae6fd', 'twLabel' => 'sky-200', 'twBgLabel' => 'bg-sky-200', 'twTextLabel' => 'text-sky-200'], 
-        ['hex' => '#7dd3fc', 'twLabel' => 'sky-300', 'twBgLabel' => 'bg-sky-300', 'twTextLabel' => 'text-sky-300'], 
-        ['hex' => '#38bdf8', 'twLabel' => 'sky-400', 'twBgLabel' => 'bg-sky-400', 'twTextLabel' => 'text-sky-400'], 
-        ['hex' => '#0ea5e9', 'twLabel' => 'sky-500', 'twBgLabel' => 'bg-sky-500', 'twTextLabel' => 'text-sky-500'], 
-        ['hex' => '#0284c7', 'twLabel' => 'sky-600', 'twBgLabel' => 'bg-sky-600', 'twTextLabel' => 'text-sky-600'], 
-        ['hex' => '#0369a1', 'twLabel' => 'sky-700', 'twBgLabel' => 'bg-sky-700', 'twTextLabel' => 'text-sky-700'], 
-        ['hex' => '#075985', 'twLabel' => 'sky-800', 'twBgLabel' => 'bg-sky-800', 'twTextLabel' => 'text-sky-800'], 
-        ['hex' => '#0c4a6e', 'twLabel' => 'sky-900', 'twBgLabel' => 'bg-sky-900', 'twTextLabel' => 'text-sky-900'], 
+        ['hex' => '#f0f9ff', 'twLabel' => 'sky-50',  'twBgLabel' => 'bg-sky-50',  'twTextLabel' => 'text-sky-50'],
+        ['hex' => '#e0f2fe', 'twLabel' => 'sky-100', 'twBgLabel' => 'bg-sky-100', 'twTextLabel' => 'text-sky-100'],
+        ['hex' => '#bae6fd', 'twLabel' => 'sky-200', 'twBgLabel' => 'bg-sky-200', 'twTextLabel' => 'text-sky-200'],
+        ['hex' => '#7dd3fc', 'twLabel' => 'sky-300', 'twBgLabel' => 'bg-sky-300', 'twTextLabel' => 'text-sky-300'],
+        ['hex' => '#38bdf8', 'twLabel' => 'sky-400', 'twBgLabel' => 'bg-sky-400', 'twTextLabel' => 'text-sky-400'],
+        ['hex' => '#0ea5e9', 'twLabel' => 'sky-500', 'twBgLabel' => 'bg-sky-500', 'twTextLabel' => 'text-sky-500'],
+        ['hex' => '#0284c7', 'twLabel' => 'sky-600', 'twBgLabel' => 'bg-sky-600', 'twTextLabel' => 'text-sky-600'],
+        ['hex' => '#0369a1', 'twLabel' => 'sky-700', 'twBgLabel' => 'bg-sky-700', 'twTextLabel' => 'text-sky-700'],
+        ['hex' => '#075985', 'twLabel' => 'sky-800', 'twBgLabel' => 'bg-sky-800', 'twTextLabel' => 'text-sky-800'],
+        ['hex' => '#0c4a6e', 'twLabel' => 'sky-900', 'twBgLabel' => 'bg-sky-900', 'twTextLabel' => 'text-sky-900'],
 
         // Blue
         ['hex' => '#eff6ff', 'twLabel' => 'blue-50',  'twBgLabel' => 'bg-blue-50',  'twTextLabel' => 'text-blue-50'],
@@ -306,7 +304,7 @@ class TailwindColorPicker extends Field
 
         $this->colorSelectedHex = $hex;
 
-        $this->bgColorSelected = 'bg-' . $this->colorSelected;
+        $this->bgColorSelected = 'bg-'.$this->colorSelected;
 
         return $this;
     }
@@ -316,8 +314,8 @@ class TailwindColorPicker extends Field
         return $this->bgColorSelected;
     }
 
-    public function setScope(string $scope) {
-
+    public function setScope(string $scope)
+    {
         $this->scope = $scope;
 
         return $this;
