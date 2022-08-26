@@ -50,34 +50,34 @@
                             x-transition:leave="transition ease-in duration-75 transform"
                             x-transition:leave-start="opacity-100 scale-100" 
                             x-transition:leave-end="opacity-0 scale-95"
-                            class="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg">
-                            <div class="rounded-md shadow-xs bg-white py-3 w-full"
-                            style="width:400px;">
-                                <div class="rounded-md border border-2 border-dashed border-black p-1 w-full h-24 mb-2">
+                            class="origin-top-right absolute mt-4 bg-gray-800 rounded-md shadow-lg z-50 border-2 border-gray-500">
+                            <div class="rounded-md shadow-xs w-[28rem]">
+                                <div class="text-xs text-gray-50 text-center w-full pt-2">Preview zone</span></div>
+                                <div class="rounded-md border-2 border-dashed border-gray-50 h-24 m-4">
                                     <div class="w-full h-full rounded-md"
                                          :style="{ 'background-color': colorSelectedHex }"
                                     >
                                     </div>
                                 </div>
-                                <div class="grid grid-cols-10 bg-gradient-to-r from-stone-500 to-stone-200 pt-2">
+                                <div class="grid grid-cols-10 pt-2 border-t-2 border-gray-500 bg-gray-100">
                                     <template x-for="color in colors" :key="color.twLabel">
                                         <div class="px-2">
                                             <template x-if="colorSelected === color.twLabel">
-                                                <div class="w-8 h-8 inline-flex rounded-full cursor-pointer border-4 border-white"
-                                                    style="box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);"
-                                                    :style="{ 'background-color': color.hex }"
-                                                    :title="color.twLabel">
-                                                </div>
+                                                <div class="w-8 h-8 inline-flex rounded-full cursor-pointer border-2 border-gray-400"
+                                                style="box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);"
+                                                :style="{ 'background-color': color.hex }"
+                                                :title="color.twLabel">
+                                                </div>    
                                             </template>
 
                                             <template x-if="colorSelected != color.twLabel">
                                                 <div 
-                                                    @click="changeColor(color.twLabel, color.hex)"
-                                                    wire:keydown.enter="changeColor(color.twLabel, color.hex)" role="checkbox"
-                                                    tabindex="0" :aria-checked="colorSelected"
-                                                    class="w-8 h-8 inline-flex rounded-full cursor-pointer border-4 border-white focus:outline-none focus:shadow-outline"
-                                                    :style="{ 'background-color': color.hex }"
-                                                    :title="color.twLabel">
+                                                @click="changeColor(color.twLabel, color.hex)"
+                                                wire:keydown.enter="changeColor(color.twLabel, color.hex)" role="checkbox"
+                                                tabindex="0" :aria-checked="colorSelected"
+                                                class="w-8 h-8 inline-flex rounded-full cursor-pointer border-2 border-gray-400 focus:outline-none focus:shadow-outline"
+                                                :style="{ 'background-color': color.hex }"
+                                                :title="color.twLabel">
                                                 </div>
                                             </template>
                                         </div>
