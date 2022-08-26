@@ -2,6 +2,10 @@
 
 All notable changes to `filament-tailwind-color-picker` will be documented in this file.
 
+## v0.1.1 - 2022-07-26
+- Improve UI
+- Add specific CSS file to the component
+
 ## v0.1.0 - 2022-07-25
 - First fully functional version
 - All Tailwind colors are inside
