@@ -21,7 +21,6 @@ class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('filament-tailwind-color-picker')
-            ->has
             ->hasViews();
     }
 }
