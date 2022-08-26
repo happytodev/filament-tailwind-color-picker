@@ -8,6 +8,10 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
 {
+    protected array $styles = [
+        'filamentTailwindColorPicker' => __DIR__ . '/../dist/css/filamentTailwindColorPicker.css',
+    ];
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -17,9 +21,7 @@ class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('filament-tailwind-color-picker')
-            // ->hasConfigFile()
+            ->has
             ->hasViews();
-        // ->hasMigration('create_filament-tailwind-color-picker_table')
-        // ->hasCommand(FilamentTailwindColorPickerCommand::class);
     }
 }
