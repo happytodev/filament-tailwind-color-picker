@@ -2,14 +2,13 @@
 
 namespace HappyToDev\FilamentTailwindColorPicker;
 
-use HappyToDev\FilamentTailwindColorPicker\Commands\FilamentTailwindColorPickerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentTailwindColorPickerServiceProvider extends PackageServiceProvider
 {
     protected array $styles = [
-        'filamentTailwindColorPicker' => __DIR__ . '/../dist/css/filamentTailwindColorPicker.css',
+        'filamentTailwindColorPicker' => __DIR__.'/../dist/css/filamentTailwindColorPicker.css',
     ];
 
     public function configurePackage(Package $package): void
