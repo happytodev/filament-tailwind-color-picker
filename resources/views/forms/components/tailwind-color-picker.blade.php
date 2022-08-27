@@ -21,7 +21,6 @@
             <div class="mb-5">
                 <div class="flex items-center">
                     <div>
-                        <label for="colorSelector" class="block font-bold mb-1">Select Color</label>
                         <input 
                             x-ref="input"
                             id="{{ $getId() }}" 
