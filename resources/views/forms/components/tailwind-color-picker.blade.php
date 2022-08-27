@@ -26,8 +26,7 @@
                             id="{{ $getId() }}" 
                             type="text" 
                             {!! ($placeholder = $getPlaceholder()) ? "placeholder=\"{$placeholder}\"" : "Pick a color" !!}
-                            {{-- class="border border-transparent px-4 py-2 leading-normal text-gray-700 bg-white rounded-lg focus:outline-none focus:shadow-outline transition duration-75 shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600 disabled:opacity-70 dark:bg-gray-700 dark:text-white dark:focus:border-primary-600 border-gray-300 dark:border-gray-600" --}}
-                            class="bg-white block border border-gray-300 border-transparent dark:bg-gray-700 dark:border-gray-600 dark:focus:border-primary-600 dark:text-white disabled:opacity-70 duration-75 focus:border-primary-600 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary-600 focus:shadow-outline leading-normal px-4 py-2 rounded-lg shadow-sm text-gray-700 transition"
+                            class="bg-white block border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:border-primary-600 dark:text-white disabled:opacity-70 duration-75 focus:border-primary-600 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary-600 focus:shadow-outline leading-normal px-4 py-2 rounded-lg shadow-sm text-gray-700 transition"
                             readonly 
                             x-model="colorSelected" />
                     </div>
