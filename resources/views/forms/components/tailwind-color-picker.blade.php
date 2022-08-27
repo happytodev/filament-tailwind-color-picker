@@ -17,21 +17,20 @@
 
         <!-- Interact with the `state` property in Alpine.js -->
 
-        <div class="max-w-sm py-2 my-2 relative">
-            <div class="mb-5">
+        <div class="max-w-sm relative">
+            <div>
                 <div class="flex items-center">
                     <div>
-                        <label for="colorSelector" class="block font-bold mb-1">Select Color</label>
                         <input 
                             x-ref="input"
                             id="{{ $getId() }}" 
                             type="text" 
                             {!! ($placeholder = $getPlaceholder()) ? "placeholder=\"{$placeholder}\"" : "Pick a color" !!}
-                            class="border border-transparent shadow px-4 py-2 leading-normal text-gray-700 bg-white rounded-md focus:outline-none focus:shadow-outline"
+                            class="bg-white block border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:border-primary-600 dark:text-white disabled:opacity-70 duration-75 focus:border-primary-600 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary-600 focus:shadow-outline leading-normal px-4 py-2 rounded-lg shadow-sm text-gray-700 transition"
                             readonly 
                             x-model="colorSelected" />
                     </div>
-                    <div class=" ml-3 mt-8 w-96">
+                    <div class=" ml-3 w-96">
                         <button type="button" @click="isOpen = !isOpen"
                             class="w-10 h-10 rounded-full focus:outline-none focus:shadow-outline inline-flex p-2 shadow"
                             :class="bgColorSelected">
