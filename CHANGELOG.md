@@ -2,6 +2,9 @@
 
 All notable changes to `filament-tailwind-color-picker` will be documented in this file.
 
+## v0.1.5 - 2022-08-28
+- add publishable assets
+
 ## v0.1.4 - 2022-08-28
 - add `bgScope()` and `textScope()` function
 - `setScope` is now a protected function
