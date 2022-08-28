@@ -5,8 +5,6 @@ namespace HappyToDev\FilamentTailwindColorPicker\Forms\Components;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
 use Filament\Forms\Components\Field;
 
-// use Filament\Support\Concerns\HasExtraAlpineAttributes;
-
 class TailwindColorPicker extends Field
 {
     use HasPlaceholder;
@@ -314,9 +312,40 @@ class TailwindColorPicker extends Field
         return $this->bgColorSelected;
     }
 
-    public function setScope(string $scope)
+    /**
+     * Function to asset scope
+     *
+     * @param  string  $scope
+     * @return Field
+     */
+    protected function setScope(string $scope)
     {
         $this->scope = $scope;
+
+        return $this;
+    }
+
+    /**
+     * Add a function to use in resources to set directly the scope to text
+     *
+     * @return Field
+     */
+    public function textScope()
+    {
+        $this->setScope('text-');
+
+        return $this;
+    }
+
+    /**
+     * Add a function to use in resources to set directly the scope to
+     * background
+     *
+     * @return Field
+     */
+    public function bgScope()
+    {
+        $this->setScope('bg-');
 
         return $this;
     }

@@ -8,42 +8,21 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/happytodev/filament-tailwind-color-picker/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/happytodev/filament-tailwind-color-picker/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/happytodev/filament-tailwind-color-picker.svg?style=flat-square)](https://packagist.org/packages/happytodev/filament-tailwind-color-picker)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This plugin add a field in Filament Form to help you to select color in the Tailwind color's palette.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/filament-tailwind-color-picker.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/filament-tailwind-color-picker)
+[You can support the development of this open-source package here](https://github.com/sponsors/happytodev)
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
+
+You need first a Filament installation working. For that, please read instructions on the Filament website.
 
 You can install the package via composer:
 
 ```bash
 composer require happytodev/filament-tailwind-color-picker
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-tailwind-color-picker-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-tailwind-color-picker-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
 ```
 
 Optionally, you can publish the views using
@@ -54,10 +33,27 @@ php artisan vendor:publish --tag="filament-tailwind-color-picker-views"
 
 ## Usage
 
+For adding a background color picker : 
+
 ```php
-$filamentTailwindColorPicker = new HappyToDev\FilamentTailwindColorPicker();
-echo $filamentTailwindColorPicker->echoPhrase('Hello, HappyToDev!');
+    TailwindColorPicker::make('backgroundColor')
+        ->bgScope(),
 ```
+
+When user choose a color in the tailwindcss palette, the value returned by the form will be for example :
+
+`bg-red-300`
+
+For adding a text color picker : 
+
+```php
+    TailwindColorPicker::make('backgroundColor')
+        ->textScope(),
+```
+
+When user choose a color in the tailwindcss palette, the value returned by the form will be for example :
+
+`text-red-300`
 
 ## Testing
 
