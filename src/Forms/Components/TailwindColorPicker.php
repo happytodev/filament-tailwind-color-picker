@@ -302,7 +302,7 @@ class TailwindColorPicker extends Field
 
         $this->colorSelectedHex = $hex;
 
-        $this->bgColorSelected = 'bg-' . $this->colorSelected;
+        $this->bgColorSelected = 'bg-'.$this->colorSelected;
 
         return $this;
     }
@@ -315,7 +315,7 @@ class TailwindColorPicker extends Field
     /**
      * Function to asset scope
      *
-     * @param string $scope
+     * @param  string  $scope
      * @return Field
      */
     protected function setScope(string $scope)
