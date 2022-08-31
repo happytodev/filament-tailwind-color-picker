@@ -1,5 +1,4 @@
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
 
 # Specific Tailwindcss color picker for Filamentphp
 
@@ -9,6 +8,10 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/happytodev/filament-tailwind-color-picker.svg?style=flat-square)](https://packagist.org/packages/happytodev/filament-tailwind-color-picker)
 
 This plugin add a field in Filament Form to help you to select color in the Tailwind color's palette.
+
+<p align="left">
+    <img src="https://repository-images.githubusercontent.com/527925032/2ba4807c-602d-47e4-af39-1b0c2ecc6a7f" alt="Banner" style="width: 100%; max-width: 800px;" />
+</p>
 
 ## Support us
 
