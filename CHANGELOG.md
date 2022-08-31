@@ -2,6 +2,11 @@
 
 All notable changes to `filament-tailwind-color-picker` will be documented in this file.
 
+## v0.1.7 - 2022-08-31
+- Remove unused code
+- Remove debug message
+- Add social picture for FTCP in README
+
 ## v0.1.6 - 2022-08-31
 - Add background on load on the color picker. 
 - Pipette now has the right color (white or black) depending on the selected colour's darkness. 
