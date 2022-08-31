@@ -3,17 +3,43 @@
     <div x-data="{ 
             colors: @js( $getColors() ), 
             isOpen: false,
+            darkSelector: '',
             scope: @js($scope),
             colorSelectedHex: @js($colorSelectedHex),
             bgColorSelected: @js($bgColorSelected),
             changeColor(twLabel, hex) {
+                console.log(twLabel.split('-'));
+                if (twLabel.split('-')[1] > 400 || twLabel.split('-')[0] == 'black') { this.darkSelector = true} else { this.darkSelector = false};
+                console.log('Dark : ' + this.darkSelector);
                 this.colorSelected = this.scope + twLabel;
                 this.colorSelectedHex = hex;
                 this.bgColorSelected = 'bg-' + twLabel;
             },
+            {{-- Init function to define correctly the colors at the start --}}
+            init() {
+                this.bgColorSelected = 'bg-' + this.colorSelected.replace(this.scope, '');
+                this.colorSelectedHex = this.arrayLookup(this.bgColorSelected, this.colors, 'twBgLabel', 'hex');
+                if (this.bgColorSelected.split('-')[2] > 400 || this.bgColorSelected.split('-')[1] == 'black') { this.darkSelector = true} else { this.darkSelector = false};
+            },
+            {{-- Used to searched the hex color from the bgColorSelected --}}
+            {{-- Source : https://gist.github.com/narottamdas/26aca662b6eb19322789ec98a445eb18 --}}
+            arrayLookup(searchValue,array,searchIndex,returnIndex) // Posted on Tathyika.com (also refer for more codes there)
+            {
+                var returnVal = null;
+                var i;
+                for(i=0; i<array.length; i++)
+                {
+                    if(array[i][searchIndex]==searchValue)
+                    {
+                    returnVal = array[i][returnIndex];
+                    break;
+                    }
+                }
+                return returnVal;
+            },
             colorSelected: $wire.entangle('{{ $getStatePath() }}'),
         }"
-        x-init="bgColorSelected = 'bg-' + colorSelected.replace(scope, '')">
+        x-init="init()">
 
         <!-- Interact with the `state` property in Alpine.js -->
 
@@ -33,7 +59,9 @@
                     <div class=" ml-3 w-96">
                         <button type="button" @click="isOpen = !isOpen"
                             class="w-10 h-10 rounded-full focus:outline-none focus:shadow-outline inline-flex p-2 shadow"
-                            :class="bgColorSelected">
+                            :class="{ 'text-white': darkSelector, 'text-black': ! darkSelector }"
+                            :style="{ 'background-color': colorSelectedHex }">  
+                            {{-- :style="{ 'text-color': darkSelector }"> --}}
                             <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path fill="none"
                                     d="M15.584 10.001L13.998 8.417 5.903 16.512 5.374 18.626 7.488 18.097z" />
@@ -49,10 +77,10 @@
                             x-transition:leave="transition ease-in duration-75 transform"
                             x-transition:leave-start="opacity-100 scale-100" 
                             x-transition:leave-end="opacity-0 scale-95"
-                            class="origin-top-right absolute mt-4 bg-gray-800 rounded-md shadow-lg z-50 border-2 border-gray-500">
-                            <div class="rounded-md shadow-xs w-[28rem]">
+                            class="left-0 lg:-left-8 top-8 absolute mt-4 bg-gray-800 rounded-md shadow-lg z-50 border-2 border-gray-500">
+                            <div class="rounded-md shadow-xs w-[18rem] lg:w-[20rem] xl:w-[24rem] 2xl:w-[28rem]">
                                 <div class="text-xs text-gray-50 text-center w-full pt-2">Preview zone</span></div>
-                                <div class="rounded-md border-2 border-dashed border-gray-50 h-24 m-4">
+                                <div class="rounded-md border-2 border-dashed border-gray-50 h-12 md:h-24 m-4">
                                     <div class="w-full h-full rounded-md"
                                          :style="{ 'background-color': colorSelectedHex }"
                                     >
@@ -60,9 +88,9 @@
                                 </div>
                                 <div class="grid grid-cols-10 pt-2 border-t-2 border-gray-500 bg-gray-100">
                                     <template x-for="color in colors" :key="color.twLabel">
-                                        <div class="px-2">
+                                        <div class="px-1">
                                             <template x-if="colorSelected === color.twLabel">
-                                                <div class="w-8 h-8 inline-flex rounded-full cursor-pointer border-2 border-gray-400"
+                                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 inline-flex rounded-full cursor-pointer border-2 border-gray-400"
                                                 style="box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);"
                                                 :style="{ 'background-color': color.hex }"
                                                 :title="color.twLabel">
@@ -74,7 +102,7 @@
                                                 @click="changeColor(color.twLabel, color.hex)"
                                                 wire:keydown.enter="changeColor(color.twLabel, color.hex)" role="checkbox"
                                                 tabindex="0" :aria-checked="colorSelected"
-                                                class="w-8 h-8 inline-flex rounded-full cursor-pointer border-2 border-gray-400 focus:outline-none focus:shadow-outline"
+                                                class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 inline-flex rounded-full cursor-pointer border-2 border-gray-400 focus:outline-none focus:shadow-outline"
                                                 :style="{ 'background-color': color.hex }"
                                                 :title="color.twLabel">
                                                 </div>

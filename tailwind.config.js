@@ -4,6 +4,9 @@ module.exports = {
     "./src/Forms/Components/**/*.php",
     "./resources/**/*.blade.php",    
   ],
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {},
   },
