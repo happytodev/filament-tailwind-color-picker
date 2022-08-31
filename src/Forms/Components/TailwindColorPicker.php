@@ -2,8 +2,8 @@
 
 namespace HappyToDev\FilamentTailwindColorPicker\Forms\Components;
 
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
+use Filament\Forms\Components\Field;
 
 class TailwindColorPicker extends Field
 {
@@ -302,7 +302,7 @@ class TailwindColorPicker extends Field
 
         $this->colorSelectedHex = $hex;
 
-        $this->bgColorSelected = 'bg-' . $this->colorSelected;
+        $this->bgColorSelected = 'bg-'.$this->colorSelected;
 
         return $this;
     }
