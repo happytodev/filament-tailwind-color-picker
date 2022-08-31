@@ -13,6 +13,28 @@ This plugin add a field in Filament Form to help you to select color in the Tail
     <img src="https://repository-images.githubusercontent.com/527925032/2ba4807c-602d-47e4-af39-1b0c2ecc6a7f" alt="Banner" style="width: 100%; max-width: 800px;" />
 </p>
 
+## Screenshots 
+
+### Single Tailwind Color Picker in Filament
+
+![SCR-20220831-umu](https://user-images.githubusercontent.com/425998/187783109-a8b4f056-c521-4d38-8467-9b518870c261.png)
+
+### Code integration example
+
+![SCR-20220831-usl](https://user-images.githubusercontent.com/425998/187783516-cf723e67-c125-4409-b134-a90f6c8d4f9c.png)
+
+### Filament Tailwind Color Picker works perfectly with other filaments fields
+
+![SCR-20220825-mge](https://user-images.githubusercontent.com/425998/187783569-d96e65ee-2eec-420f-9e03-881555aa7792.png)
+
+### Responsive on 1280x1024
+
+![1280x1024-SCR-20220831-w9u](https://user-images.githubusercontent.com/425998/187786047-2a5e0b96-fd4f-4b7a-a7ba-ba801894c898.png)
+
+### Responsive on iPhone 12 Pro
+
+![390x844-iphone12pro-SCR-20220831-wdc](https://user-images.githubusercontent.com/425998/187786776-0b25d969-bfe0-46a9-a209-44aee0b55e17.png)
+
 ## Support us
 
 [You can support the development of this open-source package here](https://github.com/sponsors/happytodev)
