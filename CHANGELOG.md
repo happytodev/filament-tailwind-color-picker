@@ -2,6 +2,11 @@
 
 All notable changes to `filament-tailwind-color-picker` will be documented in this file.
 
+## v0.1.6 - 2022-08-31
+- Add background on load on the color picker. 
+- Pipette now has the right color (white or black) depending on the selected colour's darkness. 
+- Optimize the tailwind CSS size of the plugin.
+
 ## v0.1.5 - 2022-08-28
 - add publishable assets
 
