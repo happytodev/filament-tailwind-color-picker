@@ -296,17 +296,6 @@ class TailwindColorPicker extends Field
         return $this->isOpen;
     }
 
-    public function changeColor($twLabel, $hex)
-    {
-        $this->colorSelected = $twLabel;
-
-        $this->colorSelectedHex = $hex;
-
-        $this->bgColorSelected = 'bg-'.$this->colorSelected;
-
-        return $this;
-    }
-
     public function getBgColorSelected()
     {
         return $this->bgColorSelected;

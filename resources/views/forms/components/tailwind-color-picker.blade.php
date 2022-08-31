@@ -8,16 +8,16 @@
             colorSelectedHex: @js($colorSelectedHex),
             bgColorSelected: @js($bgColorSelected),
             changeColor(twLabel, hex) {
-                console.log(twLabel.split('-'));
                 if (twLabel.split('-')[1] > 400 || twLabel.split('-')[0] == 'black') { this.darkSelector = true} else { this.darkSelector = false};
-                console.log('Dark : ' + this.darkSelector);
                 this.colorSelected = this.scope + twLabel;
                 this.colorSelectedHex = hex;
                 this.bgColorSelected = 'bg-' + twLabel;
             },
             {{-- Init function to define correctly the colors at the start --}}
             init() {
-                this.bgColorSelected = 'bg-' + this.colorSelected.replace(this.scope, '');
+                if (this.colorSelected) {
+                    this.bgColorSelected = 'bg-' + this.colorSelected.replace(this.scope, '');
+                }
                 this.colorSelectedHex = this.arrayLookup(this.bgColorSelected, this.colors, 'twBgLabel', 'hex');
                 if (this.bgColorSelected.split('-')[2] > 400 || this.bgColorSelected.split('-')[1] == 'black') { this.darkSelector = true} else { this.darkSelector = false};
             },
