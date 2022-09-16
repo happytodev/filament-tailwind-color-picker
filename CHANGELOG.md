@@ -2,6 +2,9 @@
 
 All notable changes to `filament-tailwind-color-picker` will be documented in this file.
 
+## v0.1.8 - 2022-09-16
+- Add the possibility to aliment 'fill-' with Tailwind color (only 50% of opacity right now)
+
 ## v0.1.7 - 2022-08-31
 - Remove unused code
 - Remove debug message
