@@ -2,15 +2,13 @@
 
 namespace HappyToDev\FilamentTailwindColorPicker\Forms\Components;
 
-use Closure;
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
+use Filament\Forms\Components\Field;
 use Filament\Support\Concerns\HasExtraAlpineAttributes;
 
 class TailwindColorPicker extends Field
 {
     use HasPlaceholder;
-
     use HasExtraAlpineAttributes;
 
     protected string $view = 'vendor.filament-tailwind-color-picker.forms.components.tailwind-color-picker';
@@ -45,7 +43,7 @@ class TailwindColorPicker extends Field
 
         // Red
         ['hex' => '#ef4444', 'twLabel' => 'red-500/50', 'twBgLabel' => 'bg-red-500/50', 'twTextLabel' => 'text-red-500/50'],
-        
+
         ['hex' => '#ef4444', 'twLabel' => 'red-500/20', 'twBgLabel' => 'bg-red-500/20', 'twTextLabel' => 'text-red-500/20'],
 
         // Orange
@@ -436,10 +434,8 @@ class TailwindColorPicker extends Field
 
     public function onlyOpacity()
     {
-
         $this->colorsOpacityActivated = true;
 
         return $this;
-
     }
 }
