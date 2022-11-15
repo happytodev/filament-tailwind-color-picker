@@ -11,7 +11,7 @@ class TailwindColorPicker extends Field
     use HasPlaceholder;
     use HasExtraAlpineAttributes;
 
-    protected string $view = 'vendor.filament-tailwind-color-picker.forms.components.tailwind-color-picker';
+    protected string $view = 'filament-tailwind-color-picker::forms.components.tailwind-color-picker';
 
     protected $isOpen = false;
 
