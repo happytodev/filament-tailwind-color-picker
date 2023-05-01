@@ -21,7 +21,7 @@ class TailwindColorPicker extends Field
 
     public $bgColorSelected = '';
 
-    public $scope;
+    public $scope = '';
 
     public $colorsOpacityActivated = false;
 
